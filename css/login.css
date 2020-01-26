@@ -1,0 +1,9 @@
+.card{
+	max-width: 500px;
+	margin: 150px auto;
+	box-shadow: 4px 4px 8px 4px #cfcfcf
+}
+.card-header{
+	background-color: #007bff;
+	color: #fff;
+}

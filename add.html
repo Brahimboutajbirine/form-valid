@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Add chantier</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/add.css">
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="#">EEC</a>
+        </div>  
+        <div class="profile">
+          <div class="dropdown">
+            <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span ><img class="avatar rounded-circle"src="img/killua.jpg"> name</span>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">logout</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main body -->
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center">managing construction site</h2>
+          </div>
+          <div class="card-body">
+
+            <!-- first step form -->
+
+            <div class="step" id="one">
+              <form class="needs-validation one" novalidate>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter nom de chantier" required>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Lieu" required>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <input type="date" class="form-control" aria-describedby="emailHelp" placeholder="12/12/2019" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="10" placeholder="description" required></textarea>
+                </div>
+                <div class="form-group filo">
+                  <label for="exampleFormControlFile1">Image size: </label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                  <input class="btn btn-primary mt-3 " type="submit" id="first" value="Suivant">
+                </div>
+                
+              </form>
+            </div>
+
+            <!-- second step form -->
+
+            <div class="step" id="two">
+              <form class="needs-validation two" novalidate>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">specification</th>
+                    <th scope="col">type</th>
+                    <th scope="col">unite</th>
+                    <th scope="col">Qte</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <div class="newBlock">
+                    <tr>
+                      <td colspan="4"><input class="form-control" type="text" placeholder="Block Name" required></td>
+                      <td><button type="button" class="btn btn-danger">+</button></td>
+                      <td><button type="button" class="btn btn-primary">-</button></td>
+                    </tr>
+                    <tr>
+                      <th><input class="form-control" type="text" placeholder="Task Name" required></th>
+                      <td>
+                        <select class="form-control" required>
+                          <option value="">None</option>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </td>
+                      <td><input class="form-control" type="text" placeholder="unite" required></td>
+                      <td><input class="form-control" type="text" placeholder="Qte" required></td>
+                      <td><button type="button" class="btn btn-danger">+</button></td>
+                    </tr>
+                  </div>
+                </tbody>
+              </table>
+              <button type="button" class="btb btn-primary float-right">Add Block</button>
+              <div class="nxt text-center mt-5">
+                <input class="btn btn-primary mt-5 " type="submit" id="second" value="Suivant">
+              </div>
+            </form>
+            </div>
+
+            <!-- third step form --> 
+            
+            <div class="step" id="three">
+              <form class="needs-validation three" novalidate>
+              <button type="button" class="btb btn-primary float-right">Add user</button>
+
+              <div class="row mt-5">
+                <div class="col-6 ">
+                  <select class="form-control" required>
+                    <option value="">Large select</option>
+                    <option value="xxx">Large select</option>
+                    <option value="www">Large select</option>
+                    <option value="yyy">Large select</option>
+                  </select>
+                </div>
+                <button type="button" class="btb btn-primary">Select</button>
+              </div>
+
+              <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">email</th>
+                    <th scope="col">telephone</th>
+                    <th scope="col"><button type="button" class="btn btn-danger">x</button></th>
+                  </tr>
+                </thead>
+              </table>
+                
+              
+              <div class="text-center mt-5">
+                <input class="btn btn-primary mt-5" type="submit" id="" value="Suivant">
+                
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/add.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>users</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/users.css">
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="#">EEC</a>
+        </div>  
+        <div class="profile">
+          <div class="dropdown">
+            <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span ><img class="avatar rounded-circle"src="img/killua.jpg"> name</span>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">logout</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main body -->
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center">users managing</h2>
+          </div>
+          <div class="card-body">
+            <div class="search">
+              <nav>
+                <form class="form-inline">
+                  <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <!-- model button -->
+                  <a class="ml-auto" data-toggle="modal" data-target="#exampleModal" href="#"><span class="ml-auto"><img src="https://img.icons8.com/bubbles/50/000000/add-user-male.png"></span></a>
+                  <!-- the model is in the end of the page -->
+                </form>
+              </nav>
+            </div>
+            <div class="table-user">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Phone-number</th>
+                    <th scope="col">view</th>
+                    <th scope="col">edit</th>
+                    <th scope="col">remove</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr>
+                    <td scope="col">brahim</td>
+                    <td scope="col">ovich</td>
+                    <td scope="col">brahim-ovich@gmail.com</td>
+                    <td scope="col">212641-xxxxxx</td>
+                    <td scope="col" class="text-center">
+                      <a data-toggle="modal" data-target="#exampleModal-view" href="#">
+                        <i class="material-icons text-center">remove_red_eye</i>
+                      </a>
+                    </td>
+                    <td scope="col" class="text-center">
+                      <a data-toggle="modal" data-target="#exampleModal-edit" href="#">
+                        <i class="material-icons">edit</i>
+                      </a>
+                    </td>
+                    <td scope="col" class="text-center">
+                      <a data-toggle="modal" data-target="#exampleModal-delete" href="#">
+                        <i class="material-icons">delete</i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- model add -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+            </div>
+            <div class="modal-body">
+              <form class="needs-validation" novalidate>
+                <div class="imgProfile text-center">
+                  <img class="rounded-circle" src="https://img.icons8.com/metro/100/000000/user-male-circle.png">
+                </div>
+                <div class="row nameinfo">
+                  <div class="col">
+                    <input type="text" id="fName" class="form-control" placeholder="First name" required>
+                  </div>
+                  <div class="col">
+                    <input type="text" id="lName" class="form-control" placeholder="Last name" required>
+                  </div>
+                </div>
+                 <div class="form-group">
+                    <input type="email" id="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="number" id="phone" class="form-control" id="inputPhone" placeholder="Phone Number" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Password" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputconfirm" placeholder="Confirm password" required>
+                 </div>
+                 <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                 </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary add-row">Save changes</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- model view -->
+      <div class="modal fade" id="exampleModal-view" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">view</h5>
+            </div>
+            <div class="modal-body">
+              <form class="needs-validation view" novalidate>
+                <div class="imgProfile text-center">
+                  <img class="rounded-circle" src="https://img.icons8.com/metro/100/000000/user-male-circle.png">
+                </div>
+                <div class="row nameinfo">
+                  <div class="col">
+                    <input type="text" id="fName" class="form-control" placeholder="First name" required>
+                  </div>
+                  <div class="col">
+                    <input type="text" id="lName" class="form-control" placeholder="Last name" required>
+                  </div>
+                </div>
+                 <div class="form-group">
+                    <input type="email" id="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="number" id="phone" class="form-control" id="inputPhone" placeholder="Phone Number" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Password" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputconfirm" placeholder="Confirm password" required>
+                 </div>
+                 <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                 </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary add-row">Save changes</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- model edit -->
+      <div class="modal fade" id="exampleModal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">edit</h5>
+            </div>
+            <div class="modal-body">
+              <form class="needs-validation edit" novalidate>
+                <div class="imgProfile text-center">
+                  <img class="rounded-circle" src="https://img.icons8.com/metro/100/000000/user-male-circle.png">
+                </div>
+                <div class="row nameinfo">
+                  <div class="col">
+                    <input type="text" id="fName" class="form-control" placeholder="First name" required>
+                  </div>
+                  <div class="col">
+                    <input type="text" id="lName" class="form-control" placeholder="Last name" required>
+                  </div>
+                </div>
+                 <div class="form-group">
+                    <input type="email" id="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="number" id="phone" class="form-control" id="inputPhone" placeholder="Phone Number" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Password" required>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="inputconfirm" placeholder="Confirm password" required>
+                 </div>
+                 <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                 </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary add-row">Save changes</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- model delete -->
+      <div class="modal fade" id="exampleModal-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">delete user</h5>
+            </div>
+            <div class="modal-body">
+              are you sure?!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">ignore</button>
+              <button type="button" class="btn btn-primary">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

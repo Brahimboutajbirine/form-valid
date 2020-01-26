@@ -1,0 +1,25 @@
+.navbar{
+	border-bottom: 1px solid #ccc;
+	box-shadow: 2px 2px 8px 0px #cfcfcf;
+}
+.avatar{
+	width: 36px;
+    height: 36px;
+    font-size: .875rem;
+}
+.card{
+	margin-top: 60px;
+}
+.sidbar{
+	height: 80vh;
+}
+.filo{
+	text-align: center;
+	margin: 0 auto;
+	width: 300px;
+}
+
+.step:not(:first-of-type){
+	display: none;
+}
+
